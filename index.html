@@ -490,11 +490,15 @@
                 <!-- Revizyon Örnek 1 -->
                 <div class="modernization-item">
                     <img src="https://onurcandemir.online/gokdogan/modernization_before.png" alt="Eski Asansör">
+                    <span class="badge-before">ÖNCE</span>
+                    <span class="badge-after">SONRA</span>
                 </div>
 
                 <!-- Revizyon Örnek 2 -->
                 <div class="modernization-item">
                     <img src="https://onurcandemir.online/gokdogan/modernization_after.png" alt="Yeni Asansör">
+                    <span class="badge-before">ÖNCE</span>
+                    <span class="badge-after">SONRA</span>
                 </div>
             </div>
 
@@ -505,11 +509,40 @@
     </section>
 
     <style>
+        /* Siyah-Beyaz Kutucuk Stili */
         .modernization-item {
             position: relative;
         }
 
-        /* Etiket stilleri temizlendi */
+        .badge-before,
+        .badge-after {
+            position: absolute;
+            top: 25px;
+            padding: 5px 15px !important;
+            font-weight: 700 !important;
+            font-size: 0.85rem !important;
+            letter-spacing: 0.5px;
+            z-index: 50;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+        }
+
+        .badge-before {
+            left: 25px !important;
+            background: #000000 !important;
+            /* Siyah Kutu */
+            color: #ffffff !important;
+            /* Beyaz Yazı */
+        }
+
+        .badge-after {
+            right: 25px !important;
+            background: #ffffff !important;
+            /* Beyaz Kutu */
+            color: #000000 !important;
+            /* Siyah Yazı */
+            /* İsterseniz 'Sonra' yazısını sağdaki resmin ortasına almak için right değerini artırabiliriz ama köşede daha net durur */
+        }
     </style>
 
 
