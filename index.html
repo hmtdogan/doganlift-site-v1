@@ -48,10 +48,44 @@
     <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="modal.css">
 
-    <!-- KRİTİK MOBİL DÜZELTMELER (FORCE FIX) -->
+    <!-- KRİTİK MOBİL DÜZELTMELER (FORCE FIX V3) -->
     <style>
         /* Bu stiller harici dosyayı ezer */
         @media screen and (max-width: 996px) {
+
+            /* 1. HERO GÖRSELİ DÜZELTMESİ */
+            .hero {
+                background-attachment: scroll !important;
+                /* Mobilde fixed sorun yaratır */
+                background-position: center bottom !important;
+                /* Görselin altını/merkezini göster */
+                background-size: cover !important;
+                min-height: 100vh !important;
+                /* Tam ekran */
+            }
+
+            /* 2. SCROLL OKU & BUTONLAR */
+            .scroll-indicator {
+                bottom: 20px !important;
+                /* En aşağıya sabitle */
+                font-size: 0.8rem !important;
+                z-index: 20 !important;
+            }
+
+            .hero-buttons {
+                margin-bottom: 60px !important;
+                /* Ok ile buton arasına mesafe */
+            }
+
+            /* 3. ÖNCE/SONRA ETİKETLERİ */
+            .modernization-item span {
+                font-size: 0.7rem !important;
+                padding: 4px 10px !important;
+                top: 10px !important;
+                left: 10px !important;
+            }
+
+            /* DİĞER DÜZELTMELER */
             .process-steps {
                 display: flex !important;
                 flex-direction: column !important;
@@ -63,7 +97,6 @@
                 margin-bottom: 20px !important;
                 padding: 20px !important;
                 background: #1a1a1a !important;
-                /* Görünürlüğü artırmak için */
                 border-radius: 10px !important;
             }
 
