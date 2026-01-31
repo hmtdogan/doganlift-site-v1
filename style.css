@@ -1601,3 +1601,90 @@ section {
         height: 32px;
     }
 }
+
+/* ========================================
+   RESPONSIVE DÜZELTMELER (FIX PACK)
+======================================== */
+
+@media (max-width: 992px) {
+
+    /* Process Steps Tablet: 2'li sıra */
+    .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Process Steps Mobil: Tek sütun (Artık 3 ve 4 görünecek) */
+    .process-steps {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Form Düzeltmesi */
+    .quote-form {
+        padding: 20px;
+        /* Padding azaltıldı, inputlar genişleyecek */
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Inputların tam genişlikte olduğundan emin olalım */
+    .quote-form input,
+    .quote-form select,
+    .quote-form textarea {
+        width: 100% !important;
+        box-sizing: border-box;
+        /* Padding dahil hesaplama */
+        font-size: 16px;
+        /* Mobilde zoom yapmayı engeller */
+    }
+
+    /* Footer Düzeltmesi */
+    .footer-content {
+        grid-template-columns: 1fr;
+        /* Footer tek sütun */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    /* Harita Taşmasını Engelleme */
+    .map-container iframe {
+        width: 100% !important;
+        max-width: 100vw;
+    }
+
+    /* Genel Grid Taşmalarını Önle */
+    .services-grid,
+    .products-grid,
+    .certificates-grid,
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modernization-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modernization-item {
+        height: 250px;
+    }
+
+    /* Metin Boyutlarını Mobilde Dengele */
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
