@@ -1603,88 +1603,84 @@ section {
 }
 
 /* ========================================
-   RESPONSIVE DÜZELTMELER (FIX PACK)
+   RESPONSIVE DÜZELTMELER (FIX PACK V2 - FORCE)
 ======================================== */
 
-@media (max-width: 992px) {
-
-    /* Process Steps Tablet: 2'li sıra */
+@media screen and (max-width: 992px) {
     .process-steps {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-md);
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 30px !important;
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
-    /* Process Steps Mobil: Tek sütun (Artık 3 ve 4 görünecek) */
+    /* Process Steps Mobil: KESİN OLARAK TEK SÜTUN */
     .process-steps {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+
+    .process-step {
+        width: 100% !important;
+        margin-bottom: 20px;
     }
 
     /* Form Düzeltmesi */
     .quote-form {
-        padding: 20px;
-        /* Padding azaltıldı, inputlar genişleyecek */
+        padding: 15px !important;
+        width: 100% !important;
     }
 
     .form-row {
-        grid-template-columns: 1fr;
-        gap: 15px;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
     }
 
-    /* Inputların tam genişlikte olduğundan emin olalım */
+    .form-group {
+        width: 100% !important;
+    }
+
     .quote-form input,
     .quote-form select,
     .quote-form textarea {
         width: 100% !important;
-        box-sizing: border-box;
-        /* Padding dahil hesaplama */
-        font-size: 16px;
-        /* Mobilde zoom yapmayı engeller */
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     /* Footer Düzeltmesi */
     .footer-content {
-        grid-template-columns: 1fr;
-        /* Footer tek sütun */
+        grid-template-columns: 1fr !important;
         text-align: center;
-        gap: 30px;
+        gap: 40px !important;
     }
 
-    .footer-logo {
-        justify-content: center;
+    .footer-section {
+        width: 100% !important;
     }
 
     /* Harita Taşmasını Engelleme */
+    .map-container,
     .map-container iframe {
         width: 100% !important;
-        max-width: 100vw;
+        max-width: 100% !important;
     }
 
     /* Genel Grid Taşmalarını Önle */
     .services-grid,
     .products-grid,
     .certificates-grid,
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-
+    .stats-grid,
     .modernization-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
     }
 
-    .modernization-item {
-        height: 250px;
-    }
-
-    /* Metin Boyutlarını Mobilde Dengele */
     .hero-title {
-        font-size: 2.5rem;
-    }
-
-    h2 {
-        font-size: 2rem;
+        font-size: 2.2rem !important;
     }
 }
