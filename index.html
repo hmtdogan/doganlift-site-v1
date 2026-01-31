@@ -437,29 +437,78 @@
         </div>
     </section>
 
+    <!-- SCROLL OKU (Ortalanmış) -->
+    <div class="scroll-indicator" style="left: 50%; transform: translateX(-50%); width: 100%; text-align: center;">
+        <span>Aşağı Kaydırın</span>
+        <div class="scroll-arrow">↓</div>
+    </div>
+    </header>
 
-    <!-- Modernizasyon (Revizyon) Bölümü -->
-    <section class="modernization-section">
+    <!-- ========================================
+   MODERNİZASYON BÖLÜMÜ
+======================================== -->
+    <section class="modernization-section" id="modernization">
         <div class="container">
             <div class="section-header">
-                <h2>Modernizasyon Öncesi & Sonrası</h2>
-                <p>Eski asansörlerinizi, en son teknoloji ve estetikle buluşturarak değer katıyoruz.</p>
+                <h2>Asansör Revizyonu</h2>
+                <p>Eski asansörlerinizi en yeni teknoloji ve tasarımla buluşturuyoruz.</p>
             </div>
+
             <div class="modernization-grid">
+                <!-- Revizyon Örnek 1 -->
                 <div class="modernization-item">
-                    <img src="https://onurcandemir.online/gokdogan/modernization_before.png" alt="Eski Asansör">
-                    <span>ÖNCE</span>
+                    <img src="https://images.unsplash.com/photo-1595846519845-68e298c2edd8?auto=format&fit=crop&q=80"
+                        alt="Asansör Revizyon Örneği">
+                    <span class="badge-before">ÖNCE</span>
+                    <span class="badge-after">SONRA</span>
                 </div>
+
+                <!-- Revizyon Örnek 2 -->
                 <div class="modernization-item">
-                    <img src="https://onurcandemir.online/gokdogan/modernization_after.png" alt="Yeni Asansör">
-                    <span>SONRA</span>
+                    <img src="https://images.unsplash.com/photo-1621600411688-4be93cd68504?auto=format&fit=crop&q=80"
+                        alt="Asansör Modernizasyon">
+                    <span class="badge-before">ÖNCE</span>
+                    <span class="badge-after">SONRA</span>
                 </div>
             </div>
-            <div class="modernization-text">
-                <p>Daha güvenli, daha konforlu ve enerji tasarruflu sistemler için dönüşüm hikayeleri.</p>
-            </div>
+
+            <p class="modernization-text">
+                Daha güvenli, daha konforlu ve enerji tasarruflu sistemler için dönüşüm hikayeleri.
+            </p>
         </div>
     </section>
+
+    <style>
+        /* Yeni Etiket Stilleri */
+        .modernization-item {
+            position: relative;
+        }
+
+        .badge-before,
+        .badge-after {
+            position: absolute;
+            top: 20px;
+            padding: 6px 15px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            color: white;
+            z-index: 5;
+        }
+
+        .badge-before {
+            left: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            /* Siyah */
+        }
+
+        .badge-after {
+            right: 20px;
+            background: rgba(46, 204, 113, 0.85);
+            /* Yeşil */
+        }
+    </style>
 
 
     <!-- S.S.S. (Aklınıza Takılanlar) -->
