@@ -473,6 +473,14 @@
         </div>
     </section>
 
+    <!-- SCROLL OKU (Ortalanmış & Butonlardan Kurtarılmış) -->
+    <div class="scroll-indicator"
+        style="position: absolute; bottom: 20px; left: 0; width: 100%; text-align: center; z-index: 100; pointer-events: none;">
+        <span
+            style="display: block; margin-bottom: 5px; font-size: 0.9rem; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Aşağı
+            Kaydırın</span>
+        <div class="scroll-arrow" style="font-size: 1.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">↓</div>
+    </div>
     </header>
 
     <!-- ========================================
@@ -490,11 +498,13 @@
                 <div class="modernization-item">
                     <img src="https://onurcandemir.online/gokdogan/modernization_before.png" alt="Eski Asansör">
                     <span class="badge-before">ÖNCE</span>
+                    <span class="badge-after">SONRA</span>
                 </div>
 
                 <!-- Revizyon Örnek 2 -->
                 <div class="modernization-item">
                     <img src="https://onurcandemir.online/gokdogan/modernization_after.png" alt="Yeni Asansör">
+                    <span class="badge-before">ÖNCE</span>
                     <span class="badge-after">SONRA</span>
                 </div>
             </div>
@@ -522,17 +532,18 @@
             letter-spacing: 1px;
             color: white;
             z-index: 5;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         .badge-before {
             left: 20px;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.8);
         }
 
         .badge-after {
             right: 20px;
             /* Sağ üst köşe */
-            background: rgba(46, 204, 113, 0.85);
+            background: rgba(46, 204, 113, 0.9);
         }
     </style>
 
