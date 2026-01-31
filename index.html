@@ -490,15 +490,15 @@
                 <!-- Revizyon Örnek 1 -->
                 <div class="modernization-item">
                     <img src="https://onurcandemir.online/gokdogan/modernization_before.png" alt="Eski Asansör">
-                    <span class="badge-old">ESKİ HALİ</span>
-                    <span class="badge-new">YENİ HALİ</span>
+                    <span class="badge-old">ÖNCE</span>
+                    <span class="badge-new">SONRA</span>
                 </div>
 
                 <!-- Revizyon Örnek 2 -->
                 <div class="modernization-item">
                     <img src="https://onurcandemir.online/gokdogan/modernization_after.png" alt="Yeni Asansör">
-                    <span class="badge-old">ESKİ HALİ</span>
-                    <span class="badge-new">YENİ HALİ</span>
+                    <span class="badge-old">ÖNCE</span>
+                    <span class="badge-new">SONRA</span>
                 </div>
             </div>
 
@@ -509,7 +509,7 @@
     </section>
 
     <style>
-        /* YEPYENİ Etiket Stilleri */
+        /* Etiket Stilleri - Düzeltildi */
         .modernization-item {
             position: relative;
         }
@@ -518,28 +518,31 @@
         .badge-new {
             position: absolute;
             top: 20px;
-            padding: 8px 15px !important;
-            border-radius: 6px !important;
-            font-weight: 800 !important;
-            font-size: 0.85rem !important;
-            letter-spacing: 1px;
+            padding: 6px 12px !important;
+            /* Boyut küçültüldü */
+            border-radius: 4px !important;
+            font-weight: 700 !important;
+            font-size: 0.8rem !important;
+            letter-spacing: 0.5px;
             color: white !important;
             z-index: 50;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         .badge-old {
             left: 20px !important;
-            background: #000000 !important;
-            /* Simsiyah */
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(0, 0, 0, 0.8) !important;
+            /* Siyah */
+            border: none !important;
         }
 
         .badge-new {
             right: 20px !important;
-            background: #27ae60 !important;
-            /* Canlı Yeşil */
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(46, 204, 113, 0.9) !important;
+            /* Yeşil */
+            border: none !important;
+            width: auto !important;
+            /* Genişlik taşmasını engelle */
         }
     </style>
 
