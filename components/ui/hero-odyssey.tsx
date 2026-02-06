@@ -431,11 +431,12 @@ export const HeroSection: React.FC = () => {
                     </motion.div>
                 )}
 
+                {/* Feature Items - Hidden on Mobile */}
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
-                    className="w-full z-10 top-[40%] relative"
+                    className="hidden lg:block w-full z-10 top-[40%] relative"
                 >
                     <motion.div variants={itemVariants}>
                         <FeatureItem name="Güven" value="Her Adımda" position="left-0 sm:left-10 top-40" />
@@ -456,7 +457,7 @@ export const HeroSection: React.FC = () => {
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
-                    className="relative z-30 flex flex-col items-center text-center max-w-4xl mx-auto mt-32"
+                    className="relative z-30 flex flex-col items-center text-center max-w-4xl mx-auto mt-16 md:mt-32 px-4"
                 >                    {/* <ElasticHueSlider
                         value={lightningHue}
                         onChange={setLightningHue}
@@ -477,14 +478,14 @@ export const HeroSection: React.FC = () => {
 
                     <motion.h1
                         variants={itemVariants}
-                        className="text-5xl md:text-7xl font-bold mb-2 tracking-tighter"
+                        className="text-4xl sm:text-5xl md:text-7xl font-bold mb-2 tracking-tighter"
                     >
                         GÖKDOĞAN
                     </motion.h1>
 
                     <motion.h2
                         variants={itemVariants}
-                        className="text-2xl md:text-4xl pb-3 font-light bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 bg-clip-text text-transparent"
+                        className="text-lg sm:text-2xl md:text-4xl pb-3 font-light bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 bg-clip-text text-transparent px-2"
                     >
                         Geleceğin Dikey Taşıma Teknolojisi
                     </motion.h2>
@@ -492,7 +493,7 @@ export const HeroSection: React.FC = () => {
                     {/* Description */}
                     <motion.p
                         variants={itemVariants}
-                        className="text-gray-400 mb-9 max-w-2xl"
+                        className="text-sm sm:text-base text-gray-400 mb-6 md:mb-9 max-w-2xl px-4"
                     >
                         Yüksek performanslı, güvenli ve estetik asansör çözümlerimizle yapılarınıza değer katıyoruz.
                     </motion.p>
