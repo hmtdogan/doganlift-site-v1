@@ -1,7 +1,21 @@
+import { SparklesCore } from "@/components/ui/sparkles";
+
 export default function KurumsalPage() {
     return (
-        <main className="min-h-screen pt-32 pb-12">
-            <div className="container mx-auto px-4">
+        <main className="min-h-screen pt-32 pb-12 relative overflow-hidden">
+            <div className="absolute inset-0 w-full h-full pointer-events-none">
+                <SparklesCore
+                    id="tsparticlesfullpage"
+                    background="transparent"
+                    minSize={0.6}
+                    maxSize={1.4}
+                    particleDensity={50}
+                    className="w-full h-full"
+                    particleColor="#FFFFFF"
+                    speed={0.5}
+                />
+            </div>
+            <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-4xl mx-auto space-y-12">
 
                     {/* Header */}
@@ -15,7 +29,7 @@ export default function KurumsalPage() {
                     </div>
 
                     {/* Content Box */}
-                    <div className="bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12 backdrop-blur-sm shadow-2xl">
+                    <div className="bg-black/80 border border-white/10 rounded-2xl p-8 md:p-12 backdrop-blur-md shadow-2xl relative z-20">
                         <h2 className="text-2xl font-semibold text-white mb-6">Hakkımızda</h2>
                         <div className="space-y-4 text-gray-300 leading-relaxed">
                             <p>
@@ -33,7 +47,7 @@ export default function KurumsalPage() {
                             { title: "Misyonumuz", desc: "İnsan hayatını kolaylaştıran, güvenli ve konforlu taşıma sistemleri üretmek." },
                             { title: "Değerlerimiz", desc: "Şeffaflık, İnovasyon, Müşteri Odaklılık ve Sürekli Gelişim." }
                         ].map((item, i) => (
-                            <div key={i} className="bg-white/5 border border-white/10 p-6 rounded-xl hover:bg-white/10 transition-colors">
+                            <div key={i} className="bg-black/80 border border-white/10 p-6 rounded-xl hover:bg-white/5 transition-colors backdrop-blur-md relative z-20">
                                 <h3 className="text-xl font-bold text-blue-400 mb-3">{item.title}</h3>
                                 <p className="text-sm text-gray-400">{item.desc}</p>
                             </div>

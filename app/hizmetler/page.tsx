@@ -1,3 +1,5 @@
+import { SparklesCore } from "@/components/ui/sparkles";
+
 export default function CozumlerPage() {
     const services = [
         {
@@ -23,8 +25,20 @@ export default function CozumlerPage() {
     ];
 
     return (
-        <main className="min-h-screen pt-32 pb-12">
-            <div className="container mx-auto px-4">
+        <main className="min-h-screen pt-32 pb-12 relative overflow-hidden">
+            <div className="absolute inset-0 w-full h-full pointer-events-none">
+                <SparklesCore
+                    id="tsparticleshizmetler"
+                    background="transparent"
+                    minSize={0.6}
+                    maxSize={1.4}
+                    particleDensity={50}
+                    className="w-full h-full"
+                    particleColor="#FFFFFF"
+                    speed={0.5}
+                />
+            </div>
+            <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center space-y-4 mb-16">
                     <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                         Hizmetlerimiz
@@ -38,7 +52,7 @@ export default function CozumlerPage() {
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className="group relative bg-zinc-900 border border-white/5 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] overflow-hidden"
+                            className="group relative bg-black/90 backdrop-blur-md border border-white/5 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] overflow-hidden z-20"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
 

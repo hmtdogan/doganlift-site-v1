@@ -1,11 +1,24 @@
 "use client";
 
 import { Map, MapMarker } from "@/components/ui/map";
+import { SparklesCore } from "@/components/ui/sparkles";
 
 export default function IletisimPage() {
     return (
-        <main className="min-h-screen pt-32 pb-12">
-            <div className="container mx-auto px-4">
+        <main className="min-h-screen pt-32 pb-12 relative overflow-hidden">
+            <div className="absolute inset-0 w-full h-full pointer-events-none">
+                <SparklesCore
+                    id="tsparticlesiletisim"
+                    background="transparent"
+                    minSize={0.6}
+                    maxSize={1.4}
+                    particleDensity={50}
+                    className="w-full h-full"
+                    particleColor="#FFFFFF"
+                    speed={0.5}
+                />
+            </div>
+            <div className="container mx-auto px-4 relative z-10">
 
                 <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-start">
                     {/* Contact Info */}
@@ -18,7 +31,7 @@ export default function IletisimPage() {
                         </div>
 
                         <div className="space-y-4">
-                            <div className="p-6 bg-zinc-900 border border-white/5 rounded-2xl">
+                            <div className="p-6 bg-black/90 backdrop-blur-md border border-white/5 rounded-2xl relative z-20">
                                 <h3 className="text-blue-400 font-bold mb-2">Merkez Ofis</h3>
                                 <p className="text-gray-300">
                                     Şahinler Traktör yanı, Shell karşısı<br />
@@ -28,14 +41,14 @@ export default function IletisimPage() {
                             </div>
 
                             <div className="grid sm:grid-cols-2 gap-4">
-                                <div className="p-6 bg-zinc-900 border border-white/5 rounded-2xl">
+                                <div className="p-6 bg-black/90 backdrop-blur-md border border-white/5 rounded-2xl relative z-20">
                                     <h3 className="text-blue-400 font-bold mb-2">Telefon</h3>
                                     <div className="flex flex-col gap-1">
                                         <a href="tel:+905386182097" className="text-white hover:text-blue-400 transition-colors">+90 538 618 20 97</a>
                                         <a href="tel:03565021071" className="text-white hover:text-blue-400 transition-colors">(0356) 502 10 71</a>
                                     </div>
                                 </div>
-                                <div className="p-6 bg-zinc-900 border border-white/5 rounded-2xl">
+                                <div className="p-6 bg-black/90 backdrop-blur-md border border-white/5 rounded-2xl relative z-20">
                                     <h3 className="text-blue-400 font-bold mb-2">E-Mail</h3>
                                     <a href="mailto:dgnliftasansor@gmail.com" className="text-white hover:text-blue-400 transition-colors break-all">
                                         dgnliftasansor@gmail.com
