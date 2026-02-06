@@ -431,7 +431,7 @@ export const HeroSection: React.FC = () => {
                     </motion.div>
                 )}
 
-                {/* Feature Items - Hidden on Mobile */}
+                {/* Feature Items - Desktop: Floating, Mobile: Grid */}
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -511,6 +511,31 @@ export const HeroSection: React.FC = () => {
                             Çözümlerimizi İnceleyin
                         </motion.div>
                     </Link>
+
+                    {/* Mobile Feature Items - Grid Layout */}
+                    <motion.div
+                        variants={containerVariants}
+                        className="lg:hidden grid grid-cols-2 gap-3 mt-8 w-full max-w-md px-4"
+                    >
+                        {[
+                            { name: "Güven", value: "Her Adımda" },
+                            { name: "Konfor", value: "Sessiz & Seri" },
+                            { name: "Teknoloji", value: "İleri Mühendislik" },
+                            { name: "Estetik", value: "Modern Dizayn" }
+                        ].map((item, i) => (
+                            <motion.div
+                                key={i}
+                                variants={itemVariants}
+                                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-3 hover:bg-white/10 transition-colors"
+                            >
+                                <div className="flex items-center gap-2 mb-1">
+                                    <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+                                    <div className="text-sm font-medium text-white">{item.name}</div>
+                                </div>
+                                <div className="text-xs text-gray-400 ml-3.5">{item.value}</div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
                 </motion.div>
             </div>
 
