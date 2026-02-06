@@ -1,6 +1,7 @@
 "use client";
 
 import { HeroSection } from "@/components/ui/hero-odyssey";
+import { StatsSection } from "@/components/ui/stats-section";
 import { Map, MapMarker, MarkerTooltip } from "@/components/ui/map";
 import Link from "next/link";
 import Image from "next/image";
@@ -14,6 +15,9 @@ export default function Home() {
 
       {/* Hero Section */}
       <HeroSection />
+
+      {/* Stats Section */}
+      <StatsSection />
 
       {/* Contact & Map Section */}
       <section id="contact" className="py-24 bg-zinc-950 relative overflow-hidden">
