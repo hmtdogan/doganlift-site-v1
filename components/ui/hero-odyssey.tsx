@@ -565,6 +565,9 @@ export const HeroSection: React.FC = () => {
 
                 {/* Planet/sphere */}
                 <div className="z-10 absolute top-[55%] left-1/2 transform -translate-x-1/2 w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] md:w-[600px] md:h-[600px] backdrop-blur-3xl rounded-full bg-[radial-gradient(circle_at_25%_90%,_#1e386b_15%,_#000000de_70%,_#000000ed_100%)]"></div>
+
+                {/* Bottom Fade to Black - Seamless transition to next section */}
+                <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-b from-transparent via-black/60 to-black z-20 pointer-events-none"></div>
             </motion.div>
         </div>
     );
