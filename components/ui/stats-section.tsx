@@ -49,10 +49,7 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
 
 export function StatsSection() {
     return (
-        <section className="relative py-20 bg-gradient-to-b from-black via-black to-zinc-950 overflow-hidden">
-            {/* Gradient Fade Overlay at Top */}
-            <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/0 via-black/50 to-black pointer-events-none z-20" />
-
+        <section className="relative py-20 bg-black overflow-hidden">
             {/* Sparkles Background */}
             <div className="absolute inset-0 w-full h-full pointer-events-none">
                 <SparklesCore
